@@ -1,0 +1,143 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good evening",
+        "Hey there",
+        "Hi there"
+      ],
+      "responses": [
+        "Hello! How can I help you?",
+        "Hi there! Ask me anything about COVID.",
+        "Hey! Stay safe and healthy."
+      ]
+    },
+    {
+      "tag": "covid",
+      "patterns": [
+        "What is COVID",
+        "What is COVID-19",
+        "Tell me about coronavirus",
+        "What is corona",
+        "Tell me about COVID"
+      ],
+      "responses": [
+        "COVID-19 is a viral disease caused by coronavirus. For more official info visit https://www.who.int",
+        "It spreads mostly through respiratory droplets from coughs, sneezes, or talking. Learn more at https://www.who.int",
+        "Keep distance, wash hands, and wear a mask in crowded places. See WHO guidance at https://www.who.int"
+      ]
+    },
+    {
+      "tag": "symptoms",
+      "patterns": [
+        "COVID symptoms",
+        "What are the symptoms of COVID",
+        "I have fever",
+        "I have cough",
+        "I feel tired",
+        "How do I know if I have coronavirus",
+        "What symptoms should I look for"
+      ],
+      "responses": [
+        "Common symptoms include fever, cough, tiredness, loss of taste or smell, and sore throat. See WHO info at https://www.who.int",
+        "If you have symptoms, stay home and get tested if possible. More details: https://www.who.int",
+        "Seek medical advice if you have difficulty breathing or chest pain. Official guidance: https://www.who.int"
+      ]
+    },
+    {
+      "tag": "prevention",
+      "patterns": [
+        "How do I prevent COVID",
+        "How can I protect myself from coronavirus",
+        "How to avoid COVID",
+        "Prevention tips",
+        "What should I do to stay safe"
+      ],
+      "responses": [
+        "Wash hands often, avoid close contact, wear a mask, and clean frequently touched surfaces. WHO advice: https://www.who.int",
+        "Stay up to date with vaccinations and avoid crowded indoor spaces when possible. See WHO prevention tips at https://www.who.int",
+        "If you are sick, stay home and isolate from others. Official guidance: https://www.who.int"
+      ]
+    },
+    {
+      "tag": "testing",
+      "patterns": [
+        "How to test for COVID",
+        "COVID test",
+        "Where can I get tested",
+        "Do I need a COVID test",
+        "Testing information"
+      ],
+      "responses": [
+        "COVID tests are available at clinics, pharmacies, and testing centers. WHO testing guidance: https://www.who.int",
+        "If you have symptoms or were exposed, take a rapid antigen or PCR test as recommended. See WHO info at https://www.who.int",
+        "Follow local health guidelines for testing and isolation. More: https://www.who.int"
+      ]
+    },
+    {
+      "tag": "vaccine",
+      "patterns": [
+        "COVID vaccine",
+        "Should I get vaccinated",
+        "Do I need a booster",
+        "Vaccine information",
+        "How many doses of vaccine"
+      ],
+      "responses": [
+        "Vaccination is one of the best ways to reduce your risk of severe COVID. See WHO vaccine info at https://www.who.int",
+        "Follow the latest guidance in your region for primary doses and boosters. WHO link: https://www.who.int",
+        "Ask a healthcare provider if you are unsure about vaccination. More info: https://www.who.int"
+      ]
+    },
+    {
+      "tag": "cases",
+      "patterns": [
+        "How many cases today",
+        "New COVID cases",
+        "Latest COVID cases",
+        "Coronavirus cases",
+        "Current COVID numbers"
+      ],
+      "responses": [
+        "I don't have real-time case counts right now, but you can check official health websites for the latest numbers. Visit https://www.who.int",
+        "For the newest case data, please visit your local health department or WHO website: https://www.who.int",
+        "I can answer general COVID questions, but I do not fetch live case updates. Official WHO link: https://www.who.int"
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "COVID customer care number",
+        "COVID support email",
+        "How can I contact customer care",
+        "COVID helpline",
+        "Need COVID help contact"
+      ],
+      "responses": [
+        "For COVID support, call +1-800-123-4567 or email covidhelp@gmail.com. For official updates, visit https://www.who.int",
+        "You can reach COVID customer care at +1-800-123-4567 and email covidhelp@example.com. If you need hospital contact, call +1-800-987-6543.",
+        "COVID support is available at +1-800-123-4567 and covidhelp@example.com. For hospital enquiries, use +1-800-987-6543."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you",
+        "Goodbye",
+        "Take care",
+        "See ya"
+      ],
+      "responses": [
+        "Goodbye!",
+        "Take care!",
+        "Stay safe!"
+      ]
+    }
+  ]
+}

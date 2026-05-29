@@ -1,0 +1,30 @@
+:User  what is corona
+Bot: Unsure response
+---
+:User  what are the symptoms of covid
+Bot: Unsure response
+---
+:User  what are the symtoms of corona
+Bot: Unsure response
+---
+:User  what is corona
+Bot: Unsure response
+---
+:User  what are the symtoms of corona
+Bot: Unsure response
+---
+:User  what are the  symptoms
+Bot: Unsure response
+---
+:User  what are the symptoms of corona
+Bot: Unsure response
+---
+:User  whatwill happen if covid come
+Bot: Unsure response
+---
+:User  what will happen if covid will come
+Bot: Unsure response
+---
+:User  who we should prevention
+Bot: Unsure response
+---

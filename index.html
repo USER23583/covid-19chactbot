@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COVID HelpBot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="header-row">
+        <div>
+            <h1>COVID HelpBot</h1>
+            <p class="subtitle">Get instant answers for COVID symptoms, prevention, testing, and support.</p>
+        </div>
+        <div class="menu">
+            <button id="menuBtn" onclick="toggleMenu()">⋮</button>
+            <div id="menuContent" class="menu-content">
+                <h2>Hospital Contact</h2>
+                <p><strong>Phone:</strong> +1-800-987-6543</p>
+                <p><strong>Email:</strong> covidhelp@example.com</p>
+                <p><a href="https://www.who.int" target="_blank">WHO Website</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="chat-box">
+        <div class="bot-msg bot-welcome">
+            <b>Bot:</b> Hello! I am COVID HelpBot. Ask me about symptoms, prevention, testing, vaccines, hospital contacts, or WHO resources.
+        </div>
+    </div>
+
+    <div class="input-area">
+        <input type="text" id="user-input" placeholder="Ask something about COVID...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="help-hint">Try: "What are the symptoms of COVID?", "Hospital number", or "WHO link".</div>
+</div>
+
+<script>
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
+}
+
+window.addEventListener('click', function(event) {
+    const menu = document.querySelector('.menu');
+    const button = document.getElementById('menuBtn');
+
+    if (!menu.contains(event.target) && event.target !== button) {
+        menu.classList.remove('show');
+    }
+});
+
+async function sendMessage() {
+    const input = document.getElementById("user-input");
+    const chatBox = document.getElementById("chat-box");
+
+    const userMessage = input.value;
+
+    if(userMessage.trim() === "") {
+        return;
+    }
+
+    chatBox.innerHTML += `
+        <div class="user-msg">
+            <b>You:</b> ${userMessage}
+        </div>
+    `;
+
+    const response = await fetch('/chat', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message: userMessage })
+    });
+
+    const data = await response.json();
+
+    chatBox.innerHTML += `
+        <div class="bot-msg">
+            <b>Bot:</b> ${data.response}
+        </div>
+    `;
+
+    input.value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+</script>
+
+</body>
+</html>
